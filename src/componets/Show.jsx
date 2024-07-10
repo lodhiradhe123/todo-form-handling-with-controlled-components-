@@ -1,10 +1,14 @@
 import React, { useContext } from 'react'
 import { MdDeleteForever } from "react-icons/md";
+import { textContext } from '../../context/Context';
 
 
-function Show(props) {
-  const store = props.store;
-  const setStore = store.setStore;
+function Show() {
+  const deletehandler = (i) => {
+    
+    setStore(store.filter((item, index) => index !== i));
+  };
+ const [store, setStore]=useContext(textContext)
   return (
     <div className="w-full min-h-screen bg-zinc-400 flex flex-col justify-center items-center ">
       <div className=" show mt-10  w-2/4 bg-sky-200 p-5  rounded-lg flex flex-col jitems-center">

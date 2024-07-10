@@ -3,9 +3,11 @@ import { createContext, useState } from "react";
 
 export const textContext = createContext();
 function Context(props) {
-  const [name, setName] = useState("mera name radhe hai !");
+  const [store, setStore] = useState([]);
+  // console.log(props.children);
+
   return (
-    <textContext.Provider value={[name, setName]}>
+    <textContext.Provider value={[store, setStore]}>
       {props.children}
     </textContext.Provider>
   );

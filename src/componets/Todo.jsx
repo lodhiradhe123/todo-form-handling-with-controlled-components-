@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { textContext } from "../../context/Context";
 
-function Todo(props) {
-const store = props.store;
-const setStore = props.setStore;  // props drilling
-// const [store,setStore] = useState([])
+function Todo() {
+const [store,setStore]=useContext(textContext)
   
   const [user, setUser] = useState({ data: "", status: "", description: "" });
 
@@ -13,9 +12,7 @@ const setStore = props.setStore;  // props drilling
     setStore(copydata);
     setUser({ data: "", status: "", description: "" });
   };
-  const deletehandler = (i) => {
-    setStore(store.filter((item, index) => index !== i));
-  };
+  
 
   return (
     <div className="w-full min-h-screen bg-zinc-400 flex flex-col justify-center items-center ">
