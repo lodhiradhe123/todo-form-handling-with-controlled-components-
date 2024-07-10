@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MdDeleteForever } from "react-icons/md";
 
 function Todo(props) {
 const store = props.store;
@@ -59,7 +58,7 @@ const setStore = props.setStore;  // props drilling
         <input type="submit" className="px-3 py-1 bg-blue-300 rounded-lg " />
       </form>
       <hr />
-      <div className=" show mt-10  w-2/4 bg-sky-200 p-5  rounded-lg flex flex-col jitems-center">
+      {/* <div className=" show mt-10  w-2/4 bg-sky-200 p-5  rounded-lg flex flex-col jitems-center">
         <h1 className="ml-[43%] capitalize font-bold">tasks..</h1>
         <div className="data w-2/4 bg-white border-2 border-black rounded-lg p-3 mt-4">
           {store.length > 0 ? (
@@ -83,7 +82,7 @@ const setStore = props.setStore;  // props drilling
             <h1>loading....</h1>
           )}
         </div>
-      </div>
+      </div> */}
       <h1>{name}</h1>
     </div>
   );
